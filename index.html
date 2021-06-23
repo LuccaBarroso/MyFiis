@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Page Title</title>
+    <meta name="description" content="Roughly 155 characters" />
+    <link rel="stylesheet" type="text/css" href="mystyle.css" />
+    <style src="mystyle.css"></style>
+
+    <!-- my script -->
+    <script type="module" src="js/controller.js"></script>
+
+    <!-- code from chart.js to have access to charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- code from font awesome to have access to icons -->
+    <script
+      src="https://kit.fontawesome.com/325333b979.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- pop up -->
+    <div id="modal">
+      <div id="modal-content">
+        <span class="close" id="btnClose">&times;</span>
+        <header id="modalHeader"><h1>Hello There!</h1></header>
+        <p id="modalP">
+          I noticed it’s the first time you enter this page, do you want me to
+          generate some fake data to check the functionalities of the
+          application?
+        </p>
+        <div id="buttonsModal">
+          <button id="btnYes">Hell Yeah!</button>
+          <button id="btnNo">No!</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Simple top navebar -->
+    <div class="topnav">
+      <a href="index.html" class="item active" id="myFiis"> MyFIIs</a>
+      <a href="#MyData" class="item" id="MyDataBtn">My Data</a>
+      <a href="#" class="item">
+        <label for="addCsv" class="csvInput">Add Csv</label>
+        <input type="file" id="addCsv" accept=".csv" />
+      </a>
+      <a href="#MyData" class="icon" id="dropdown">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Content For the My data Page, starts with display none -->
+    <div class="content">
+      <div class="chartAndBalance">
+        <div id="pizzaChart">
+          <canvas class="myPizzaChart"></canvas>
+        </div>
+        <div id="balance">
+          <table class="gradeInfo">
+            <tr>
+              <th>Patrimonio</th>
+            </tr>
+            <tr>
+              <td id="patrimonio"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <table class="gradeInfo" id="displayMainData">
+        <tr>
+          <th>Nome</th>
+          <th>%</th>
+          <th>Preço</th>
+          <th>Qnt</th>
+          <th>Total</th>
+        </tr>
+      </table>
+      <div class="income">
+        <canvas id="income"></canvas>
+      </div>
+      <div class="balanceG">
+        <canvas id="balanceG"></canvas>
+      </div>
+    </div>
+
+    <!-- content of main page -->
+    <div class="mainPage">
+      <div class="conteinerTwoBoxes">
+        <div class="leftBox">
+          <p>Welcome to MyFIIs,</p>
+          <p>
+            Here you can keep track of your investments in brazilian's real
+            state funds.
+          </p>
+        </div>
+        <div class="rightBox">
+          <img src="imgs/money.png" alt="" />
+        </div>
+      </div>
+
+      <div id="tutorial">
+        <h1>How does it works</h1>
+        <div class="item">
+          <p class="number">1</p>
+          <div>
+            <p>Import your data from the bank!</p>
+            <p class="stepObservation">
+              currently only works for easyInvest users
+            </p>
+          </div>
+        </div>
+        <div class="item">
+          <div>
+            <p>Add the data to this website!</p>
+            <p class="stepObservation"></p>
+          </div>
+          <p class="number">2</p>
+        </div>
+        <div class="item">
+          <p class="number">3</p>
+          <div>
+            <p>
+              Check your investments any <br / id="quebraGambiarra">time you
+              want!
+            </p>
+            <p class="stepObservation"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- footer with my portfolio link -->
+  <footer>
+    <p>Liked this website? Hire the developer!</p>
+    <a href="https://www.google.com">
+      <button>Lucca's Portfolio</button>
+    </a>
+  </footer>
+</html>

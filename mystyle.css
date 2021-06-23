@@ -1,0 +1,373 @@
+/* start the color variable */
+:root {
+  --backgroundColor: #fbf7eb;
+  --darkLava: #453f3c;
+  --warmBlack: #17a398;
+  --red: #d72638;
+  --green: #61b160;
+}
+
+/* sets the background color and staff */
+body {
+  margin: 0px;
+  background-color: var(--backgroundColor);
+}
+
+/* Start of navBar things */
+
+.topnav {
+  background-color: var(--darkLava);
+  overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: sans-serif;
+  transition: transform 500ms cubic-bezier(0.6, 0.66, 0, 0.99);
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  transform: scale(1.1);
+}
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: var(--warmBlack);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+#addCsv {
+  display: none;
+}
+/* small screen top nav and not clicked the dropdown yet */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  .topnav a:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* small screen top nav with dropdown*/
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+  }
+  /* seleciona todas as opções menos a primeira */
+  .topnav.responsive a:not(:first-child) {
+    text-align: right;
+  }
+}
+
+/* start of things for My Data page */
+
+.content {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+}
+.chartAndBalance {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  align-content: center;
+  justify-content: center;
+}
+#balance {
+  align-self: center;
+}
+#pizzaChart {
+  width: 30%;
+  padding: 30px;
+  padding-left: 80px;
+}
+@media screen and (max-width: 1000px) {
+  #pizzaChart {
+    width: 60%;
+  }
+}
+.gradeInfo {
+  font-family: sans-serif;
+  width: 90%;
+  font-size: 20px;
+  margin: 45px;
+  text-align: center;
+}
+.gradeInfo td,
+.gradeInfo th {
+  padding: 6px;
+  border-radius: 10px;
+}
+.gradeInfo tr:nth-child(even) {
+  background-color: #817a78;
+}
+.gradeInfo tr:hover {
+  background-color: #585d61;
+  color: white;
+}
+
+.gradeInfo th {
+  padding: 10px;
+  background-color: var(--warmBlack);
+  border-radius: 5px;
+  color: white;
+}
+
+#patrimonio {
+  background-color: var(--backgroundColor);
+  color: var(--darkLava);
+}
+@media screen and (max-width: 600px) {
+  #balance {
+    position: relative;
+    right: 10px;
+  }
+}
+td a {
+  color: black;
+  text-decoration-line: none;
+  font-weight: bolder;
+}
+td a:hover {
+  color: var(--backgroundColor);
+}
+.income {
+  width: 80%;
+  padding: 50px;
+  align-items: center;
+}
+.balanceG {
+  width: 84%;
+  padding: 50px;
+  padding-left: 110px;
+  align-items: center;
+}
+
+/* start of main page content */
+
+.conteinerTwoBoxes {
+  display: flex;
+  flex-direction: row;
+}
+.conteinerTwoBoxes div {
+  height: 600px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.leftBox p {
+  color: var(--darkLava);
+  font-family: roboto;
+  font-size: 25px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.leftBox p:first-child {
+  font-size: 30px;
+  margin-bottom: -20px;
+  margin-left: -20px;
+}
+.leftBox {
+  justify-content: left;
+  flex-direction: column;
+}
+.rightBox {
+  background-color: var(--warmBlack);
+  justify-content: right;
+  flex-direction: column;
+  border-radius: 0px 0px 0px 100px;
+}
+@media screen and (max-width: 1100px) {
+  .conteinerTwoBoxes {
+    flex-direction: column;
+  }
+  .conteinerTwoBoxes div {
+    width: 100%;
+    height: 550px;
+  }
+  .leftBox p:first-child {
+    font-size: 30px;
+    margin-bottom: -20px;
+  }
+  .rightBox {
+    border-radius: 0px;
+  }
+}
+
+#tutorial h1 {
+  font-family: roboto;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-size: 60px;
+  color: var(--darkLava);
+  text-align: center;
+}
+#tutorial p {
+  font-family: roboto;
+  font-size: 25px;
+  margin: 0px;
+  color: var(--darkLava);
+}
+#tutorial .number {
+  font-size: 80px;
+  color: var(--darkLava);
+  margin: 10px;
+  padding: 10px;
+}
+
+#tutorial div {
+  margin: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#tutorial div div {
+  display: flex;
+  flex-direction: column;
+}
+
+#tutorial .stepObservation {
+  font-size: 18px;
+}
+#tutorial .item {
+  /* background-color: var(--warmBlack); */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  #quebraGambiarra {
+    display: none;
+  }
+}
+
+/* pop up window */
+
+#modal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(00, 00, 00);
+  background-color: rgb(00, 00, 00, 0.5);
+}
+#modal-content {
+  margin: auto;
+  background-color: var(--backgroundColor);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+#modal h1 {
+  font-family: roboto;
+}
+#modal p {
+  font-family: roboto;
+  font-size: 20px;
+}
+#buttonsModal {
+  display: flex;
+  justify-content: space-around;
+}
+#buttonsModal button {
+  font-family: roboto;
+  font-weight: bold;
+  width: 200px;
+  background-color: var(--warmBlack);
+  border-radius: 20px;
+  border: none;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  transition: transform 500ms cubic-bezier(0.6, 0.66, 0, 0.99);
+}
+#buttonsModal button:hover {
+  transform: scale(1.1);
+}
+
+/* footer */
+
+footer {
+  background-color: var(--darkLava);
+  width: 100%;
+  color: white;
+  font-family: roboto;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  font-size: 30px;
+  padding: 40px;
+  padding-left: 0px;
+
+  /* temporary until I finish my portfolio */
+  display: none;
+}
+
+footer button {
+  color: white;
+  background-color: var(--warmBlack);
+  font-size: 25px;
+  transition: transform 500ms cubic-bezier(0.6, 0.66, 0, 0.99);
+  border-radius: 5px;
+  border: none;
+  padding: 25px;
+}
+footer p {
+  text-align: center;
+}
+footer button:hover {
+  transform: scale(1.02);
+}
+@media screen and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
